@@ -11,6 +11,32 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'.html','/' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
+  <meta name="yandex-verification" content="4ae1c326a324ab77">
+  <meta name="yandex-verification" content="4ae1c326a324ac00">
+  <meta name="msvalidate.01" content="B2F06A0F4AFBCFDE099F041236FB1134">
+
+  <meta name="robots" content="All" />
+
+  <meta name="msapplication-tap-highlight" content="no">
+
+
+  <link rel="manifest" href="manifest.json">
+
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="YarBuksir">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="YarBuksir">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3F51B5">
+
   <script type="application/ld+json">
   {% include json_ld_story.json %}
   </script>
@@ -34,5 +60,8 @@
   <script custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js" async></script>
   <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  {% include trackers.html %}
 </head>

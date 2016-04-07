@@ -28,6 +28,5 @@
     "url": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
     "height": 800,
     "width": 800
-  },
-  "description": "{{ site.description }}"
+  }
 }
