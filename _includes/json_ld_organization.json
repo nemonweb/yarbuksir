@@ -1,0 +1,23 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "{{ prepend: site.baseurl | prepend: site.url }}",
+  "logo": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+  "name" : "{{ site.name }}",
+  "contactPoint" : [{
+    "@type" : "ContactPoint",
+    "telephone" : "+7 (4852) 91-76-76",
+    "contactType" : "customer service"
+  }, {
+    "@type" : "ContactPoint",
+    "telephone" : "+7 (902) 331 76-76",
+    "contactType" : "customer service"
+  }],
+  "sameAs" : [
+    "https://www.facebook.com/yarbuksir76",
+    "http://www.youtube.com/channel/UCkvTpEeFZfkaDVA849_glyQ",
+    "https://twitter.com/yarbuksir",
+    "https://plus.google.com/+YarbuksirRu",
+    "https://vk.com/yarbuksir"
+  ]
+}

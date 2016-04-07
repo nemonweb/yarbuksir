@@ -1,0 +1,33 @@
+title: Служба эвакуации ЯрБуксир. Эвакуатор, грузовой эвакуатор, манипулятор
+email: yarbuksir@yandex.ru
+description: >
+  Эвакуатор в Ярославле - грузовой и легковой, кран-манипулятор. Узнать телефон. Вызвать круглосуточно. Цены
+keywords: эвакуатор, грузовой эвакуатор, манипулятор, ярославль, цена, круглосуточно, контакты, услуги, телефон
+logo: "http://yarbuksir.ru/images/logo.png"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yarbuksir.ru" # the base hostname & protocol for your site
+paginate:	5 # The number of posts to show per page on your homepage
+
+name: 'Служба эвакуации ЯрБуксир'
+bio: >
+  Служба эвакуации ЯрБуксир оказывает услуги эвакуации с 2005 года.
+author_image: "/assets/images/author.jpg"
+twitter_username: yarbuksir
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  # parse_block_html: true
+
+jekyll-minifier:
+  exclude: 'atom.xml'
+
+tag_page_layout: tag_page
+tag_page_dir: tags
+
+gems:
+  - jekyll-paginate
+  # - jekyll-seo-tag
+  - jekyll/tagging
+  # - jekyll-minifier

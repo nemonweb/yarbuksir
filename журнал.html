@@ -1,0 +1,23 @@
+---
+layout: default
+title: Журнал - ЯрБуксир
+description: Журнал о эвакуаторах и манипуляторах в городе Ярославле
+permalink: /журнал/
+keywords: журнал, ярбуксир, ярославль, эвакуатор, грузовой эвакуатор, манипулятор
+---
+
+<main class="content-container" role="main">
+  <article>
+    <header>
+      <h1>Журнал о эвакуаторах и манипуляторах в городе Ярославле</h1>
+    </header>
+
+    <ul>
+      {% for post in site.categories['журнал'] %}
+        {% if post.url %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </article>
+</main>
