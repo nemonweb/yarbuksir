@@ -1,0 +1,232 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^yarbuksir\.ru$ [NC]
+RewriteRule ^(.*)$ http://yarbuksir.ru/$1 [R=301,L]
+</IfModule>
+
+# For full documentation and other suggested options, please see
+# http://svn.modxcms.com/docs/display/MODx096/Friendly+URL+Solutions
+# including for unexpected logouts in multi-server/cloud environments
+# and especially for the first three commented out rules
+
+#php_flag register_globals Off
+#AddDefaultCharset utf-8
+#php_value date.timezone Europe/Moscow
+
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/css
+  <IfModule mod_setenvif.c>
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag MTime Size
+
+<IfModule mod_expires.c>
+
+    #ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+
+    ExpiresByType text/css                              "access plus 1 year"
+
+
+  # Data interchange
+
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+
+  # Favicon (cannot be renamed!) and cursor images
+
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+
+  # JavaScript
+
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+
+  # Manifest files
+
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+
+  # Media files
+
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+
+  # Web fonts
+
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+
+
+  # Other
+
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>
+
+<IfModule mod_headers.c>
+    # WEEK
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+
+    # WEEK
+    <FilesMatch "\.(js|css|swf)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+#ExpiresActive On
+#ExpiresDefault A0
+
+ErrorDocument 404 /404.html
+
+RewriteCond %{REQUEST_URI} ^/evakuator_gruzovoj.html$
+RewriteRule ^.*$ http://yarbuksir.ru/грузовой-эвакуатор/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/evakuator_legkovyx_avtomobilej.html$
+RewriteRule ^.*$ http://yarbuksir.ru/эвакуатор-легковых-автомобилей/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/манипулятор-ярославль.html$
+RewriteRule ^.*$ http://yarbuksir.ru/манипулятор-ярославль/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/video.html$
+RewriteRule ^.*$ http://yarbuksir.ru/видео/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/kontakty.html$
+RewriteRule ^.*$ http://yarbuksir.ru/контакты/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/o_kompanii.html$
+RewriteRule ^.*$ http://yarbuksir.ru/о-компании/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/13/начинаем-вести-журнал.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/ярбуксир-начинает-вести-журнал/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/14/происшествие-с-бензовозом.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/происшествие-с-бензовозом/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/15/вытаскиваем-фуру-на-дорогу.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/вытаскиваем-фуру-на-дорогу/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/23/эвакуируем-из-реки.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/эвакуируем-грузовик-из-реки/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/23/грузовым-эвакуатором-тащим-тягач.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/грузовым-эвакуатором-тащим-битый-тягач/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/24/night-order.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/ночной-заказ-на-наш-грузовой-эвакуатор/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/07/24/эвакуируем-машину-из-кювета.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/07/эвакуируем-легковую-машину-из-кювета/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/2015/08/01/манипулятор-ярославль-перевозим-бетонные-блоки.html$
+RewriteRule ^.*$ http://yarbuksir.ru/журнал/2015/08/манипулятор-ярославль-перевозим-бетонные-блоки/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/sitemap.html$
+RewriteRule ^.*$ http://yarbuksir.ru/карта-сайта/? [R=301,L]
+
+
+RewriteCond %{REQUEST_URI} ^/blog/tag/$
+RewriteRule ^.*$ http://yarbuksir.ru/tags/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/tag/манипулятор/$
+RewriteRule ^.*$ http://yarbuksir.ru/tags/манипулятор/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/tag/грузовой-эвакуатор/$
+RewriteRule ^.*$ http://yarbuksir.ru/tags/грузовой-эвакуатор/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/tag/легковой-эвакуатор/$
+RewriteRule ^.*$ http://yarbuksir.ru/tags/легковой-эвакуатор/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/tag/ярославль/$
+RewriteRule ^.*$ http://yarbuksir.ru/tags/ярославль/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/blog/tag/эвакуатор/$
+RewriteRule ^.*$ http://yarbuksir.ru/tags/эвакуатор/? [R=301,L]

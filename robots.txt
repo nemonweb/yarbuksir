@@ -1,0 +1,14 @@
+User-agent: *
+Crawl-delay: 4
+Allow: /
+
+
+User-agent: Yandex
+Disallow:
+
+User-agent: googlebot
+Disallow:
+
+Sitemap: http://yarbuksir.ru/sitemap.xml
+
+host: yarbuksir.ru
