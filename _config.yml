@@ -31,3 +31,4 @@ gems:
   # - jekyll-seo-tag
   - jekyll/tagging
   # - jekyll-minifier
+  - jekyll-sitemap
