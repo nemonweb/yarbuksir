@@ -1,0 +1,8 @@
+ftp_host: ip
+ftp_dir: path
+ftp_passive: false
+
+ftp_port: 21                  # default 21
+ftp_username: name     # default read from stdin
+ftp_password: pass # default read from stdin
+ftp_secure: false              # default false
