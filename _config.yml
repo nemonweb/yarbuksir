@@ -3,7 +3,7 @@ email: yarbuksir@yandex.ru
 description: >
   Эвакуатор в Ярославле - грузовой и легковой, кран-манипулятор. Узнать телефон. Вызвать круглосуточно. Цены
 keywords: эвакуатор, грузовой эвакуатор, манипулятор, ярославль, цена, круглосуточно, контакты, услуги, телефон
-logo: "http://yarbuksir.ru/images/logo.png"
+logo: "/images/logo.png"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yarbuksir.ru" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
@@ -30,5 +30,5 @@ gems:
   - jekyll-paginate
   # - jekyll-seo-tag
   - jekyll/tagging
-  - jekyll-minifier
+  # - jekyll-minifier
   - jekyll-sitemap
