@@ -1,0 +1,60 @@
+h1 {
+  width: 90%;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 auto 20px;
+  line-height: 1.1em;
+  word-spacing: -.02em;
+  color: #000000;
+}
+p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #000000;
+  line-height: 1.5em;
+}
+a {
+  color: #2C6CB4;
+  line-height: 1.5em;
+  bottom-border: 1px #d5d5d5;
+}
+blockquote {
+  font-size: 13pt;
+  font-style: italic;
+}
+.pull_quote {
+  display: block;
+  font-weight: normal;
+  line-height: 1em;
+  font-size: 18pt;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.center {
+  text-align: center;
+}
+
+.line {
+  width: 25%;
+  margin-left: 5%;
+}
+.subhead,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #000000;
+  line-height: 1.5em;
+  font-weight: 700;
+}

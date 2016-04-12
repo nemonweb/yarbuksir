@@ -1,0 +1,37 @@
+.pb-caption {
+  width: 90%;
+  margin: 10px auto;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #6e6e6e;
+  line-height: 1.3em;
+  text-align: left;
+  display:block;
+}
+.carousel-caption {
+  font-size: 10pt;
+  color: #6a6a6a;
+  overflow: auto;
+  text-align: left;
+}
+.carousel2 {
+  margin: 16px 0;
+}
+.carousel2 .slide > amp-img > img {}
+.carousel2 .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+  font-size: smaller;
+  max-height: 30%;
+}
+figure {
+  margin: 0;
+}
+figcaption {
+  display: none;
+}

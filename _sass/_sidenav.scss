@@ -1,0 +1,133 @@
+.navButton,
+.navClose {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5em;
+  text-align: left;
+  display: block;
+  padding: 5px 0 0 10px;
+  cursor: pointer;
+}
+.navClose {
+  z-index: -1;
+  visibility: hidden;
+}
+.navButton:focus {
+  opacity: 0;
+}
+.navFrame {
+  background-color: #3F51B5;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 385px;
+  min-height: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: left;
+  display: block;
+  transform: translateX(-390px);
+  -webkit-transform: translateX(-390px);
+  transition: transform 500ms cubic-bezier(0, 1, 0, 1);
+}
+.sitenav {
+  width: 385px;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  transform: translateX(-150px);
+  -webkit-transform: translateX(-150px);
+  transition: transform 500ms cubic-bezier(0, 1, 0, 1);
+}
+#navscrim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #999;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0, .67, 0, .67);
+  pointer-events: none;
+}
+.navButton:focus ~ .navFrame {
+  transform: translateX(-85px);
+  -webkit-transform: translateX(-85px);
+}
+.navButton:focus ~ .navFrame .sitenav {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+.navButton:focus ~ .navClose,
+.navFrame:active {
+  z-index: 3;
+  visibility: visible;
+}
+.navButton:focus ~ .content-container,
+.navButton:focus ~ .footer-background,
+.navFrame:active ~ .content-container,
+.navFrame:active ~ .footer-background {
+  transform: scale(0.98) translateX(5px);
+  -webkit-transform: scale(0.98) translateX(5px);
+}
+.navButton:focus ~ #navscrim,
+.navButton:focus ~ #navscrim,
+.navFrame:active ~ #navscrim,
+.navFrame:active ~ #navscrim {
+  opacity: 0.75;
+  pointer-events: auto;
+}
+.side-nav {
+  font-size: 14px;
+  list-style: none;
+  padding-left: 115px;
+}
+.sitenav .side-nav li {
+  list-style-type: none;
+  line-height: 1.1em;
+  font-size: 14px;
+}
+.sitenav .side-nav li a {
+  width: auto;
+  display: inline-block;
+  color: #f7f7f7;
+  padding: 3px 6px;
+}
+#sections-menu-off-canvas {}
+#sections-menu-off-canvas li {
+  margin-bottom: 10px;
+}
+#sections-menu-off-canvas li a {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  color: #f7f7f7;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 4px;
+}
+#site-attribution-off-canvas-menu {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin: 0;
+}
+#site-attribution-off-canvas-menu li {
+  font-size: 14px;
+}
+#site-attribution-off-canvas-menu li a {
+  text-decoration: none;
+}
+#site-attribution-off-canvas-menu li:last-child {
+  padding-bottom: 50px;
+}
