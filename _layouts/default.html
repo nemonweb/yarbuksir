@@ -2,6 +2,25 @@
 <html ⚡ lang="en">
   {% include head.html %}
   <body>
+    <amp-sidebar id='sidebar1'>
+      <ul>
+        <li> Nav item 1</li>
+        <li> Nav item 2</li>
+        <li> Nav item 3</li>
+        <li> Nav item 4</li>
+        <li> Nav item 5</li>
+        <li> Nav item 6</li>
+        <li> Nav item 7</li>
+        <li> Nav item 8</li>
+        <li> Nav item 9</li>
+        <li on="tap:sidebar1.close"> Close</li>
+      </ul>
+    </amp-sidebar>
+    <div class="hamburger" on='tap:sidebar1.toggle'></button>
+    <button on='tap:sidebar1'>Open</button>
+    <button on='tap:sidebar1.open'>Open</button>
+    <button on='tap:sidebar1.close'>x</button>
+
     {% include trackers.html %}
     {% include header.html %}
 
