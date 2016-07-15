@@ -9,20 +9,73 @@
         <span>8 (902) 331 76-76</span>
       </a>
     </div>
-  </div><a tabindex="0" class="navButton">&#x2630;</a><span tabindex="0" class="navClose">&#x2630;</span>
-  <button class="navFrame">
-    <nav id="main-sections-nav" class="sitenav">
-      <ul id="sections-menu-off-canvas" class="side-nav">
-        <li class="main-nav has-sub"><a href="/грузовой-эвакуатор" class="main-nav-item">Грузовой эвакуатор</a></li>
-        <li class="main-nav has-sub"><a href="/эвакуатор-легковых-автомобилей" class="main-nav-item">Легковой эвакуатор</a></li>
-        <li class="main-nav has-sub"><a href="/манипулятор-ярославль" class="main-nav-item">Манипулятор</a></li>
-        <li class="main-nav has-sub"><a href="/видео" class="main-nav-item">Видео</a></li>
-        <li class="main-nav has-sub"><a href="/цены" class="main-nav-item">Цена</a></li>
-        <li class="main-nav has-sub"><a href="/контакты" class="main-nav-item">Контакты</a></li>
-        <li class="main-nav has-sub"><a href="/журнал" class="main-nav-item">Журнал</a></li>
-        <li class="main-nav has-sub"><a href="/о-компании" class="main-nav-item">О компании</a></li>
-      </ul>
-    </nav>
-  </button>
-  <button id="navscrim"></button>
+  </div>
+
+  <amp-sidebar id='sidebar' layout="nodisplay" side="left" class='sidebar-menu'>
+    <div class='close black'></div>
+    <ul>
+      <li>
+        <a class='link' href="/">Главная</a>
+      </li>
+      <li>
+        <a class='link' href="/грузовой-эвакуатор">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Грузовой эвакуатор
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/эвакуатор-легковых-автомобилей">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Легковой эвакуатор
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/манипулятор-ярославль">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Манипулятор
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/видео">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Видео
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/цены">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Цены
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/контакты">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Контакты
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/журнал">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            Журнал
+          </amp-fit-text>
+        </a>
+      </li>
+      <li>
+        <a class='link' href="/о-компании">
+          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+            О компании
+          </amp-fit-text>
+        </a>
+      </li>
+    </ul>
+  </amp-sidebar>
+
+  <a tabindex="0" class="navButton" on='tap:sidebar.toggle'>&#9776;</a>
+
 </header>
