@@ -4,3 +4,5 @@ _site
 .DS_Store
 secret
 _glynn.yml
+images
+node_modules

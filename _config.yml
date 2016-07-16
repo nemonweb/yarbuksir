@@ -26,6 +26,8 @@ jekyll-minifier:
 tag_page_layout: tag_page
 tag_page_dir: tags
 
+exclude: [images_src, node_modules]
+
 gems:
   - jekyll-paginate
   # - jekyll-seo-tag
