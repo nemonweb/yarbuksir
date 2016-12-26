@@ -11,46 +11,55 @@
     </div>
   </div>
 
-  <amp-sidebar id='sidebar' layout="nodisplay" side="left" class='sidebar-menu'>
-    <div class='close black'></div>
-    <ul>
-      <li>
-        <a class='link' href="/">Главная</a>
-      </li>
-      <li>
-        <a class='link' href="/грузовой-эвакуатор">
-          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
-            Грузовой эвакуатор
-          </amp-fit-text>
-        </a>
-      </li>
-      <li>
-        <a class='link' href="/эвакуатор-легковых-автомобилей">
-          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
-            Легковой эвакуатор
-          </amp-fit-text>
-        </a>
-      </li>
-      <li>
-        <a class='link' href="/манипулятор-ярославль">
-          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
-            Манипулятор
-          </amp-fit-text>
-        </a>
-      </li>
-      <li>
-        <a class='link' href="/видео">
-          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
-            Видео
-          </amp-fit-text>
-        </a>
-      </li>
-      <!-- <li>
-        <a class='link' href="/цены">
-          <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
-            Цены
-          </amp-fit-text>
-        </a>
+  <a tabindex="0" class="navButton" on='tap:sidebar.toggle'>&#9776;</a>
+
+</header>
+
+<amp-sidebar id='sidebar' layout="nodisplay" side="left" class='sidebar-menu'>
+  <div class='close black'
+    alt="close sidebar"
+        on="tap:sidebar.close"
+        role="button"
+        tabindex="0"
+    ></div>
+  <ul>
+    <li>
+      <a class='link' href="/">Главная</a>
+    </li>
+    <li>
+      <a class='link' href="/грузовой-эвакуатор">
+        <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+          Грузовой эвакуатор
+        </amp-fit-text>
+      </a>
+    </li>
+    <li>
+      <a class='link' href="/эвакуатор-легковых-автомобилей">
+        <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+          Легковой эвакуатор
+        </amp-fit-text>
+      </a>
+    </li>
+    <li>
+      <a class='link' href="/манипулятор-ярославль">
+        <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+          Манипулятор
+        </amp-fit-text>
+      </a>
+    </li>
+    <li>
+      <a class='link' href="/видео">
+        <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+          Видео
+        </amp-fit-text>
+      </a>
+    </li>
+    <!-- <li>
+      <a class='link' href="/цены">
+      <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24">
+      Цены
+      </amp-fit-text>
+      </a>
       </li> -->
       <li>
         <a class='link' href="/контакты">
@@ -73,9 +82,7 @@
           </amp-fit-text>
         </a>
       </li>
-    </ul>
-  </amp-sidebar>
+  </ul>
+</amp-sidebar>
 
-  <a tabindex="0" class="navButton" on='tap:sidebar.toggle'>&#9776;</a>
 
-</header>

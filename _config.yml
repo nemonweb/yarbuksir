@@ -28,6 +28,9 @@ tag_page_dir: tags
 
 exclude: [images_src, node_modules]
 
+sass:
+  style: compressed
+
 gems:
   - jekyll-paginate
   # - jekyll-seo-tag

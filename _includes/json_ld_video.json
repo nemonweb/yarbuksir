@@ -1,22 +1,22 @@
 {
   "@context": "http://schema.org",
   "@type": "VideoObject",
-  "name": "Title",
-  "description": "Video description",
-  "thumbnailUrl": "https://www.example.com/thumbnail.jpg",
-  "uploadDate": "2015-02-05T08:00:00+08:00",
-  "duration": "PT1M33S",
+  "name": "Двумя грузовыми эвакуаторами вытаскиваем цистерну МАЗ",
+  "description": "Поднимаем двумя эвакуаторами цистерну МАЗ из кювета. Грузовой эвакуатор http://yarbuksir.ru/",
+  "thumbnailUrl": "http://i.ytimg.com/vi/6v7mYcrHYzs/hqdefault.jpg",
+  "uploadDate": "2016-12-18",
+  "duration": "PT2M17S",
   "publisher": {
     "@type": "Organization",
-    "name": "Example Publisher",
+    "name": "Служба эвакуации ЯрБуксир",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.com/logo.jpg",
-      "width": 600,
+      "url": "http://yarbuksir.ru/images/logo.png",
+      "width": 60,
       "height": 60
     }
   },
-  "contentUrl": "https://www.example.com/video123.flv",
-  "embedUrl": "https://www.example.com/videoplayer.swf?video=123",
-  "interactionCount": "2347"
+  "contentUrl": "https://www.youtube.com/watch?v=6v7mYcrHYzs",
+  "embedUrl": "https://www.youtube.com/embed/6v7mYcrHYzs"
 }
+
