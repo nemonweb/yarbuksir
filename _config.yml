@@ -8,6 +8,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yarbuksir.ru" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 
+incremental: true
+
 name: 'Служба эвакуации ЯрБуксир'
 bio: >
   Служба эвакуации ЯрБуксир оказывает услуги эвакуации с 2005 года.
