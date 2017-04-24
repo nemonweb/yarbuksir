@@ -78,46 +78,55 @@ keywords: эвакуатор, грузовой эвакуатор, яросла�
 
     <p><strong><em>Позвоните по телефону (4852) 91-76-76 или 8 (902) 331 76-76</em></strong> в Службу Эвакуации «ЯрБуксир» и задайте ваши вопросы по услугам и стоимости грузовой эвакуации в Ярославле и Ярославской или проконсультируйтесь по конкретной проблеме, произошедшей с вашим грузовым автотранспортом.</p>
 
-    <h2>Фото грузовой эвакуации</h2>
+    <section>
+      <h2>Фото грузовой эвакуации</h2>
 
-    <div class='gallery'>
-      <div class='diva'>
-        <figure>
-          <amp-img on="tap:lightbox1" role="button" tabindex="0" width="940" height="705" layout="responsive"
-            alt="Буксируем желтый MAN грузовым эвакуатором"
-            src="http://yarbuksir.ru/images/gallery/evakuator_gruzovoj_man.jpg"></amp-img>
-          <figcaption>
-            Буксируем желтый MAN грузовым эвакуатором
-          </figcaption>
-        </figure>
+      <div class='gallery'>
+        <div class='diva'>
+          <figure>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" width="940" height="705" layout="responsive" alt="Буксируем желтый MAN грузовым эвакуатором"
+              src="http://yarbuksir.ru/images/gallery/evakuator_gruzovoj_man.jpg"></amp-img>
+            <figcaption>
+              Буксируем желтый MAN грузовым эвакуатором
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class='diva'>
+          <figure>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" width="730" height="414" layout="responsive" alt="Грузовой эвакуатор - баннер"
+              src="http://yarbuksir.ru/images/gallery/2XAUbTGDf.jpg"></amp-img>
+            <figcaption>
+              Грузовой эвакуатор - баннер
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class='diva'>
+          <figure>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" width="551" height="414" layout="responsive" alt="Грузовой эвакуатор и битый авторбус"
+              src="http://yarbuksir.ru/images/gallery/4cNhdQt1R.jpg"></amp-img>
+            <figcaption>
+              Грузовой эвакуатор и битый авторбус
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
-      <div class='diva'>
-        <figure>
-          <amp-img on="tap:lightbox1" role="button" tabindex="0" width="730" height="414" layout="responsive"
-            alt="Грузовой эвакуатор - баннер"
-            src="http://yarbuksir.ru/images/gallery/2XAUbTGDf.jpg"></amp-img>
-          <figcaption>
-            Грузовой эвакуатор - баннер
-          </figcaption>
-        </figure>
-      </div>
+      <p><a href="/наши-работы">Больше фото наших работ здесь</a></p>
+    </section>
 
-      <div class='diva'>
-        <figure>
-          <amp-img on="tap:lightbox1" role="button" tabindex="0" width="551" height="414" layout="responsive"
-            alt="Грузовой эвакуатор и битый авторбус"
-            src="http://yarbuksir.ru/images/gallery/4cNhdQt1R.jpg"></amp-img>
-          <figcaption>
-            Грузовой эвакуатор и битый авторбус
-          </figcaption>
-        </figure>
-      </div>
-    </div>
+    <section>
+      <h2>Записи в журнале о грузовой эвакуации</h2>
 
-    <p>Мы регулярно выкладываем фотоотчеты о проделанной работе в наш журнал. <a href="/tags/грузовой-эвакуатор">Посмотреть записи о грузовом эвакуаторе</a></p>
+      <ul>
+        {% for post in site.tags['грузовой эвакуатор'] %} {% if post.url %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %} {% endfor %}
+      </ul>
 
-    <p><a href="/наши-работы">Больше фото наших работ здесь</a></p>
+      <p>Мы регулярно выкладываем фотоотчеты о проделанной работе. <a href="/журнал">Посмотрите все записи в нашем журнале.</a></p>
+    </section>
 
   </article>
 </main>
